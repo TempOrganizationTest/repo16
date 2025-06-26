@@ -1,11 +1,12 @@
 name: Restore Repository
 
 permissions:
-  contents: write          # kod push
-  pull-requests: write     # PR oluşturma (GRAPHQL createPullRequest)
-  issues: write            # issue yönetimi
-  checks: write            # gerekiyorsa check run yönetimi
-  actions: write       
+  id-token: write         # ← OIDC token’ı için
+  contents: write
+  pull-requests: write
+  issues: write
+  checks: write
+  actions: write    
 
 on:
   workflow_dispatch:
