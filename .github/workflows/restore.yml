@@ -1,6 +1,11 @@
 name: Restore Repository
 
-permissions: write-all
+permissions:
+  contents: write          # kod push
+  pull-requests: write     # PR oluşturma (GRAPHQL createPullRequest)
+  issues: write            # issue yönetimi
+  checks: write            # gerekiyorsa check run yönetimi
+  actions: write       
 
 on:
   workflow_dispatch:
